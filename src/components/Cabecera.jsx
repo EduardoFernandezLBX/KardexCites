@@ -15,7 +15,7 @@ const Cabecera = () => {
 
         <div>
             <div className="cabecera">
-                {/* {
+                {
                     items.map(item => {
                         <>
                             <Link href={item.url}>
@@ -23,7 +23,7 @@ const Cabecera = () => {
                             </Link>
                         </>
                     })
-                } */}
+                }
                 <TabMenu model={items} />
             </div>
         </div>
