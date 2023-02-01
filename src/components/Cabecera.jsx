@@ -1,6 +1,6 @@
 import React from 'react';
 import { TabMenu } from 'primereact/tabmenu';
-import { Outlet, Link } from "react-router-dom";
+//import { Outlet, Link } from "react-router-dom";
 
 const Cabecera = () => { 
 
