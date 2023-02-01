@@ -24,11 +24,11 @@ const router = createBrowserRouter([
   //   element: <ListMovimientos />,
   // },
   {
-    path: "entradas",
+    path: "/entradas",
     element: <ListEntradas />,
   },
   {
-    path: "salidas",
+    path: "/salidas",
     element: <ListSalidas />,
   },
 ]);
