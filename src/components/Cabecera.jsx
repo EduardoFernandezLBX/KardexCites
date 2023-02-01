@@ -16,13 +16,13 @@ const Cabecera = () => {
         <div>
             <div className="cabecera">
                 {
-                    items.map(item => {
-                        <>
-                            <Link href={item.url}>
-                                    {item.label}
-                            </Link>
-                        </>
-                    })
+                    // items.map(item => {
+                    //     <>
+                    //         <Link href={item.url}>
+                    //                 {item.label}
+                    //         </Link>
+                    //     </>
+                    // })
                 }
                 <TabMenu model={items} />
             </div>
