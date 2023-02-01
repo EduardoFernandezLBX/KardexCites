@@ -11,12 +11,10 @@ import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
 import React, { useRef } from 'react';
-import { Calendar } from 'primereact/calendar';
-import { Dropdown } from 'primereact/dropdown';
 import { FilterMatchMode, FilterOperator } from 'primereact/api';
 import { InputNumber } from 'primereact/inputnumber';
 
-function ListEntradas (){
+function ListEntradas () {
 
     const [entradas, setEntradas] = useState([]);
     const [selectedEntrada, setSelectedEntrada] = useState(null);
