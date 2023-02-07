@@ -7,17 +7,17 @@ const Cabecera = () => {
 
     const items = [
         {
-            label: 'Productos', 
+            label: 'PRODUCTOS', 
             cName: 'btn-menu',
             path:"/"
         },
         {
-            label: 'Entradas', 
+            label: 'ENTRADAS', 
             cName: 'btn-menu',
             path:"/entradas"
         },
         {
-            label: 'Salidas',  
+            label: 'SALIDAS',  
             cName: 'btn-menu',
             path:"/salidas"
         },

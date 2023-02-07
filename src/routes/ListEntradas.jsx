@@ -191,7 +191,9 @@ function ListEntradas () {
               <div className='field col-12 md:col-4'>
                   <span className="p-float">
                     <label htmlFor="FECHA">Fecha Ingreso</label>
-                    <InputText name="FECHA" value={fecha} onChange={(e) => setFecha(e.target.value)} dateFormat="yy-mm-dd" showIcon showButtonBar/>
+                    <div>
+                      <input type="date" className='select-date' name="FECHA" value={fecha} onChange={(e) => setFecha(e.target.value)}/>
+                    </div>
                   </span>
                 </div>
 
@@ -205,17 +207,14 @@ function ListEntradas () {
                 <div className='p-field'>
                   <span className="p-float">
                     <label htmlFor="ID PROD">ID del Producto</label>
-                    {/* <Dropdown name="ID_PROD" 
-                    value={GetIdProd} 
-                    onChange={(e) => setIDprod(e.target.value)} /> */}
                     <div>
-                    <select name="ID_PROD" onChange={(e) => setIDprod(e.target.value)}>
-                      <option>Seleccione un id producto</option>
-                      {
-                      productos.map( (productoget)=> 
-                      <option key={ productoget.ID_PROD}> {productoget.ID_PROD} </option> )
-                      }
-                    </select>
+                      <select name="ID_PROD" onChange={(e) => setIDprod(e.target.value)}>
+                        <option>Seleccione un id producto</option>
+                        {
+                        productos.map( (productoget)=> 
+                        <option key={ productoget.ID_PROD}> {productoget.ID_PROD} </option> )
+                        }
+                      </select>
                     </div>
                   </span>
                 </div>
@@ -223,7 +222,6 @@ function ListEntradas () {
                 <div className='p-field'>
                   <span className="p-float">
                   <label htmlFor="CATEGORIA">Categoria</label>
-                    {/* <InputText name="CATEGORIA" value={catprod} onChange={(e) => setCatProd(e.target.value)} /> */}
                     <div>
                     <select name="CATEGORIA" onChange={(e) => setCatProd(e.target.value)}>
                       <option>Seleccione una Categoria</option>
@@ -239,7 +237,6 @@ function ListEntradas () {
                 <div className='p-field'>
                   <span className="p-float">
                     <label htmlFor="NAME">Nombre del Producto</label>
-                    {/* <InputText name="NAME_PRODUCTO" value={nameprod} onChange={(e) => setNameProd(e.target.value)} /> */}
                     <div>
                     <select name="NAME_PRODUCTO" onChange={(e) => setNameProd(e.target.value)}>
                       <option>Seleccione un producto</option>
