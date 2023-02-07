@@ -1,34 +1,47 @@
 import React from 'react';
-import { TabMenu } from 'primereact/tabmenu';
-//import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Panel } from 'primereact/panel';
+import "./Cabecera.css";
 
 const Cabecera = () => { 
 
     const items = [
-        {label: 'Home', icon: 'pi pi-fw pi-home', url:"/"},
-        //{label: 'Movimientos', icon: 'pi pi-fw pi-file', url:"/movimientos"},
-        {label: 'Entradas', icon: 'pi pi-fw pi-file', url:"/entradas"},
-        {label: 'Salidas', icon: 'pi pi-fw pi-file', url:"/salidas"},
+        {
+            label: 'Productos', 
+            cName: 'btn-menu',
+            path:"/"
+        },
+        {
+            label: 'Entradas', 
+            cName: 'btn-menu',
+            path:"/entradas"
+        },
+        {
+            label: 'Salidas',  
+            cName: 'btn-menu',
+            path:"/salidas"
+        },
     ];
 
     return (
-
+        
         <div>
+            <Panel>
             <div className="cabecera">
                 {
-                    // items.map(item => {
-                    //     <>
-                    //         <Link href={item.url}>
-                    //                 {item.label}
-                    //         </Link>
-                    //     </>
-                    // })
+                    items.map((item, index) => { 
+                        return(
+                        <li key={index} className={item.cName}>
+                            <Link to={item.path}>
+                                <span>{item.label}</span>
+                            </Link>
+                        </li>
+                        );
+                    })
                 }
-                <TabMenu model={items} />
             </div>
+            </Panel>
         </div>
-
-
     )
 }
 
